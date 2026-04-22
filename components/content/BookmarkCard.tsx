@@ -19,12 +19,12 @@ export function BookmarkCard({ bookmark }: BookmarkCardProps) {
       className="block"
     >
       <Card variant="hover" padding="md">
-        {/* Favicon & Title */}
-        <div className="flex items-start gap-3 mb-2">
+        {/* Header: Favicon & Title */}
+        <div className="flex items-start gap-3 mb-3">
           <img
             src={favicon}
             alt=""
-            className="w-5 h-5 mt-0.5"
+            className="w-5 h-5 mt-0.5 shrink-0"
             onError={(e) => {
               e.currentTarget.src = '/favicon.ico';
             }}
@@ -36,18 +36,18 @@ export function BookmarkCard({ bookmark }: BookmarkCardProps) {
 
         {/* Description */}
         {bookmark.description && (
-          <p className="text-sm text-[var(--color-text-muted)] mb-2 line-clamp-2">
+          <p className="text-sm text-[var(--color-text-muted)] mb-4 line-clamp-2">
             {bookmark.description}
           </p>
         )}
 
-        {/* Tags */}
-        <TagList tags={bookmark.tags.slice(0, 3)} size="sm" variant="muted" className="mb-2" />
-
-        {/* URL */}
-        <p className="text-xs text-[var(--color-text-subtle)] truncate">
-          {bookmark.url}
-        </p>
+        {/* Footer: Tags + URL */}
+        <div className="flex items-center justify-between gap-3 pt-3 border-t border-[var(--color-border-subtle)]">
+          <TagList tags={bookmark.tags.slice(0, 3)} size="sm" variant="muted" />
+          <span className="text-xs text-[var(--color-text-subtle)] truncate shrink-0 max-w-[120px]">
+            {bookmark.url.replace(/^https?:\/\/(www\.)?/, '').split('/')[0]}
+          </span>
+        </div>
       </Card>
     </a>
   );

@@ -25,7 +25,7 @@ export function ReviewCard({ review }: ReviewCardProps) {
         <span className="p-1.5 rounded bg-[var(--color-surface)]">
           {typeIcon}
         </span>
-        <span className="text-xs text-[var(--color-text-muted)]">
+        <span className="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">
           {review.type === 'book' ? '书籍' : '电影'}
         </span>
       </div>
@@ -43,14 +43,14 @@ export function ReviewCard({ review }: ReviewCardProps) {
       )}
 
       {/* Rating */}
-      <RatingStars rating={review.rating} className="mb-3" />
+      <RatingStars rating={review.rating} className="mb-4" />
 
-      {/* Tags */}
-      <TagList tags={review.tags.slice(0, 3)} size="sm" variant="muted" className="mb-3" />
-
-      {/* Date */}
-      <div className="text-xs text-[var(--color-text-subtle)]">
-        {formatDate(review.date)}
+      {/* Footer: Tags + Date */}
+      <div className="flex items-center justify-between gap-3 pt-3 border-t border-[var(--color-border-subtle)]">
+        <TagList tags={review.tags.slice(0, 3)} size="sm" variant="muted" />
+        <time className="text-xs text-[var(--color-text-subtle)] shrink-0">
+          {formatDate(review.date)}
+        </time>
       </div>
     </Card>
   );
