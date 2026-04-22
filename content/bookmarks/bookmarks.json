@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "url": "https://github.com",
+    "title": "GitHub",
+    "description": "全球最大的代码托管平台",
+    "tags": ["开发", "代码"],
+    "category": "开发工具",
+    "isPublic": true,
+    "createdAt": "2024-01-01"
+  },
+  {
+    "id": "2",
+    "url": "https://nextjs.org",
+    "title": "Next.js",
+    "description": "React 全栈框架，支持 SSR 和 SSG",
+    "tags": ["React", "Next.js", "框架"],
+    "category": "前端",
+    "isPublic": true,
+    "createdAt": "2024-02-01"
+  },
+  {
+    "id": "3",
+    "url": "https://tailwindcss.com",
+    "title": "Tailwind CSS",
+    "description": "实用优先的 CSS 框架",
+    "tags": ["CSS", "样式"],
+    "category": "前端",
+    "isPublic": true,
+    "createdAt": "2024-02-15"
+  },
+  {
+    "id": "4",
+    "url": "https://typescriptlang.org",
+    "title": "TypeScript",
+    "description": "JavaScript 的类型超集",
+    "tags": ["TypeScript", "类型"],
+    "category": "语言",
+    "isPublic": true,
+    "createdAt": "2024-03-01"
+  }
+]

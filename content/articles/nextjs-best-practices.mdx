@@ -1,0 +1,74 @@
+---
+title: "Next.js App Router 最佳实践"
+description: "探索 Next.js App Router 的最佳实践，包括路由组织、数据获取、缓存策略等。"
+category: "technology"
+tags: ["Next.js", "React", "Web开发"]
+publishedAt: "2024-03-10"
+---
+
+# Next.js App Router 最佳实践
+
+Next.js App Router 引入了全新的路由架构，本文将分享一些最佳实践。
+
+## 路由组织
+
+使用路由组 (Route Groups) 来组织路由：
+
+```
+app/
+├── (public)/
+│   ├── blog/
+│   └── about/
+├── (admin)/
+│   └── dashboard/
+```
+
+## 数据获取
+
+使用 Server Components 进行数据获取：
+
+```typescript
+async function BlogPost({ slug }) {
+  const post = await getPost(slug);
+  return <Article content={post.content} />;
+}
+```
+
+## 缓存策略
+
+### 静态渲染
+
+默认情况下，页面是静态渲染的：
+
+```typescript
+// 在构建时生成
+export default async function Page() {
+  const data = await fetch('https://api.example.com/data');
+  return <div>{data.title}</div>;
+}
+```
+
+### 动态渲染
+
+使用 `no-store` 禁用缓存：
+
+```typescript
+const data = await fetch('https://api.example.com/data', {
+  cache: 'no-store'
+});
+```
+
+## 并行数据获取
+
+使用 `Promise.all` 进行并行获取：
+
+```typescript
+const [posts, authors] = await Promise.all([
+  getPosts(),
+  getAuthors()
+]);
+```
+
+---
+
+这些实践将帮助你构建高性能的 Next.js 应用。

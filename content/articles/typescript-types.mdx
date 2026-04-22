@@ -1,0 +1,64 @@
+---
+title: "TypeScript 类型系统深入理解"
+description: "深入探讨 TypeScript 的类型系统，包括泛型、类型推断、高级类型模式等核心概念。"
+category: "technology"
+tags: ["TypeScript", "类型系统", "泛型"]
+publishedAt: "2024-02-15"
+series: "TypeScript 系列"
+seriesOrder: 1
+---
+
+# TypeScript 类型系统深入理解
+
+TypeScript 的类型系统是其最强大的特性之一。本文将深入探讨其核心概念。
+
+## 泛型基础
+
+泛型允许我们创建可重用的组件，这些组件可以与多种类型一起工作：
+
+```typescript
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+// 使用
+const result = identity<string>("hello");
+```
+
+## 类型推断
+
+TypeScript 的类型推断能力非常强大：
+
+```typescript
+let x = 3; // 推断为 number
+let y = [1, 2, 3]; // 推断为 number[]
+```
+
+## 高级类型模式
+
+### 条件类型
+
+```typescript
+type IsString<T> = T extends string ? true : false;
+
+type A = IsString<string>; // true
+type B = IsString<number>; // false
+```
+
+### 映射类型
+
+```typescript
+type Readonly<T> = {
+  readonly [P in keyof T]: T[P];
+};
+```
+
+## 实践建议
+
+1. 优先使用 `interface` 定义对象形状
+2. 使用 `type` 定义联合类型和复杂类型
+3. 避免使用 `any`，优先使用 `unknown`
+
+---
+
+这是 TypeScript 系列的第一篇文章，后续将继续深入探讨更多高级主题。

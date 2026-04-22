@@ -1,0 +1,104 @@
+/* Design Tokens - Qubit */
+
+:root {
+  /* ========== Colors ========== */
+  /* Light Theme */
+  --color-background: oklch(98% 0 0);
+  --color-surface: oklch(96% 0 0);
+  --color-surface-secondary: oklch(94% 0 0);
+  --color-surface-hover: oklch(94% 0 0);
+  --color-code-bg: oklch(92% 0 0);
+  --color-text: oklch(20% 0 0);
+  --color-text-muted: oklch(45% 0 0);
+  --color-text-subtle: oklch(60% 0 0);
+  --color-accent: oklch(55% 0.15 250);
+  --color-accent-hover: oklch(50% 0.18 250);
+  --color-accent-subtle: oklch(92% 0.03 250);
+  --color-success: oklch(60% 0.15 145);
+  --color-warning: oklch(70% 0.15 75);
+  --color-error: oklch(55% 0.22 25);
+  --color-border: oklch(88% 0 0);
+  --color-border-subtle: oklch(92% 0 0);
+
+  /* ========== Typography ========== */
+  --font-display: "Geist", system-ui, sans-serif;
+  --font-body: "Geist Sans", system-ui, sans-serif;
+  --font-mono: "Geist Mono", "Fira Code", monospace;
+  --font-serif: "Lora", Georgia, serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-hero: clamp(2.5rem, 1rem + 4vw, 5rem);
+
+  --leading-tight: 1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.75;
+
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.025em;
+
+  /* ========== Spacing ========== */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-section: clamp(3rem, 2rem + 5vw, 8rem);
+
+  /* ========== Radii ========== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+
+  /* ========== Shadows ========== */
+  --shadow-sm: 0 1px 2px oklch(0% 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px oklch(0% 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.1);
+
+  /* ========== Transitions ========== */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========== Layout ========== */
+  --content-width: 720px;
+  --content-width-wide: 960px;
+  --content-width-full: 1200px;
+  --sidebar-width: 280px;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --color-background: oklch(12% 0 0);
+  --color-surface: oklch(16% 0 0);
+  --color-surface-secondary: oklch(18% 0 0);
+  --color-surface-hover: oklch(20% 0 0);
+  --color-code-bg: oklch(15% 0 0);
+  --color-text: oklch(90% 0 0);
+  --color-text-muted: oklch(70% 0 0);
+  --color-text-subtle: oklch(55% 0 0);
+  --color-accent: oklch(65% 0.15 250);
+  --color-accent-hover: oklch(70% 0.18 250);
+  --color-accent-subtle: oklch(20% 0.03 250);
+  --color-border: oklch(25% 0 0);
+  --color-border-subtle: oklch(20% 0 0);
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "1",
+    "title": "Qubit 项目启动",
+    "description": "开始构建个人知识分享平台",
+    "date": "2024-01-01",
+    "type": "achievement"
+  },
+  {
+    "id": "2",
+    "title": "完成基础架构",
+    "description": "Phase 1 完成：设计系统、UI组件、布局组件",
+    "date": "2024-01-15",
+    "type": "achievement"
+  },
+  {
+    "id": "3",
+    "title": "博客系统上线",
+    "description": "Phase 2 完成：文章列表、详情页、评论系统",
+    "date": "2024-02-01",
+    "type": "achievement"
+  },
+  {
+    "id": "4",
+    "title": "学习 TypeScript 高级类型",
+    "description": "深入研究泛型、条件类型、映射类型",
+    "date": "2024-02-15",
+    "type": "study"
+  },
+  {
+    "id": "5",
+    "title": "数字花园系统完成",
+    "description": "实现双向链接、知识图谱可视化",
+    "date": "2024-03-01",
+    "type": "achievement"
+  }
+]

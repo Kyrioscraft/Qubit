@@ -1,0 +1,41 @@
+---
+title: "不可变性"
+maturity: "budding"
+tags: ["programming", "functional"]
+createdAt: "2024-02-10"
+---
+
+# 不可变性 (Immutability)
+
+不可变性是函数式编程的核心原则之一。
+
+## 什么是不可变性？
+
+不可变性意味着一旦数据被创建，就不能被修改。任何"修改"操作都会返回一个新的数据副本。
+
+## 为什么重要？
+
+### 1. 避免副作用
+
+```typescript
+// 可变 - 有副作用
+const arr = [1, 2, 3];
+arr.push(4); // arr 被修改了
+
+// 不可变 - 无副作用
+const arr = [1, 2, 3];
+const newArr = [...arr, 4]; // arr 保持不变
+```
+
+### 2. 简化调试
+
+不可变数据让状态追踪变得简单，因为每个状态都是确定的。
+
+### 3. 并发安全
+
+多个线程/进程可以安全地读取不可变数据，不需要锁。
+
+## 相关概念
+
+- [[functional-programming]] - 函数式编程
+- [[programming-concepts]] - 编程思想索引

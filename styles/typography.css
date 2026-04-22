@@ -1,0 +1,10 @@
+/* Typography - Minimal */
+
+/* Content width utilities */
+.prose-wide {
+  max-width: 960px;
+}
+
+.prose-full {
+  max-width: 1200px;
+}

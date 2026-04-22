@@ -1,0 +1,40 @@
+{
+  "name": "Qubit",
+  "short_name": "Qubit",
+  "description": "个人知识分享平台",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f8f8",
+  "theme_color": "#5566ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "96x96",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon.ico",
+      "sizes": "192x192",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["education", "blog"],
+  "shortcuts": [
+    {
+      "name": "博客",
+      "url": "/blog",
+      "description": "查看博客文章"
+    },
+    {
+      "name": "数字花园",
+      "url": "/garden",
+      "description": "探索知识图谱"
+    }
+  ]
+}
