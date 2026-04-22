@@ -2,11 +2,14 @@
   "name": "Qubit",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "prebuild": "node scripts/prebuild.js",
+    "build": "npm run prebuild && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "deploy": "npm run build && echo 'Deploy dist/ to Cloudflare Pages'"
   },
   "dependencies": {
     "@shikijs/rehype": "^4.0.2",

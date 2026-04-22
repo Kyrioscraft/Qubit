@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { cache } from 'react';
 import { getCompiledArticle, getAllArticles, getRelatedArticles } from '@/lib/content/articles';
 import { formatDate } from '@/lib/utils/date';
 import { generateArticleMetadata, generateArticleJsonLD, JsonLDScript } from '@/components/seo';
@@ -10,6 +11,9 @@ import { GiscusComments } from '@/components/content/GiscusComments';
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>;
 }
+
+// 缓存 MDX 编译结果，同一请求内复用
+const getCachedCompiledArticle = cache(getCompiledArticle);
 
 export async function generateStaticParams() {
   const articles = getAllArticles();
@@ -41,7 +45,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params;
-  const article = await getCompiledArticle(slug);
+  const article = await getCachedCompiledArticle(slug);
 
   if (!article) {
     notFound();

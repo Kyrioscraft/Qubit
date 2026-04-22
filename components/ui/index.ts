@@ -10,6 +10,9 @@ export type { TagProps, TagListProps } from './Tag';
 export { SearchInput } from './SearchInput';
 export type { SearchInputProps } from './SearchInput';
 
+export { SearchModal } from './SearchModal';
+export type { SearchModalProps } from './SearchModal';
+
 export { TableOfContents } from './TableOfContents';
 export type { TableOfContentsProps } from './TableOfContents';
 

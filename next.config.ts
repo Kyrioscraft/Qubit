@@ -1,26 +1,20 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // 图片优化配置
+  // 静态导出配置 - 用于 Cloudflare Pages
+  output: 'export',
+  distDir: 'dist',
+
+  // 图片优化配置 - 静态导出不支持 Next.js 图片优化
   images: {
-    // 远程图片域名白名单
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: '**',
-      },
-    ],
-    // 图片格式优化
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
   },
 
   // 性能优化
   experimental: {
-    // 启用部分预渲染（可选）
-    // ppr: true,
+    viewTransition: true,
   },
 
-  // 字体优化（默认已启用）
   // 优化响应头
   async headers() {
     return [
@@ -41,13 +35,6 @@ const nextConfig: NextConfig = {
           },
         ],
       },
-    ];
-  },
-
-  // 重定向规则
-  async redirects() {
-    return [
-      // 示例重定向
     ];
   },
 };

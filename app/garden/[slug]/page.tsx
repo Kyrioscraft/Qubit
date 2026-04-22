@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { cache } from 'react';
 import { getCompiledGardenNode, getAllGardenNodes, MaturityLabels } from '@/lib/content/garden';
 import { formatDate } from '@/lib/utils/date';
 import { BacklinksSection } from '@/components/content/BacklinksSection';
@@ -9,6 +10,9 @@ import { TagList } from '@/components/ui';
 interface GardenNodePageProps {
   params: Promise<{ slug: string }>;
 }
+
+// 缓存 MDX 编译结果
+const getCachedGardenNode = cache(getCompiledGardenNode);
 
 export async function generateStaticParams() {
   const nodes = getAllGardenNodes();
@@ -39,7 +43,7 @@ export async function generateMetadata({ params }: GardenNodePageProps): Promise
 
 export default async function GardenNodePage({ params }: GardenNodePageProps) {
   const { slug } = await params;
-  const node = await getCompiledGardenNode(slug);
+  const node = await getCachedGardenNode(slug);
 
   if (!node) {
     notFound();

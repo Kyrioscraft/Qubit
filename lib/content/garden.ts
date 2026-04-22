@@ -15,6 +15,13 @@ import { mdxComponents } from '@/components/mdx';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
+// Shiki 配置 - 性能优化：预加载常用语言
+const shikiOptions = {
+  theme: 'github-dark',
+  langs: ['javascript', 'typescript', 'jsx', 'tsx', 'python', 'bash', 'json', 'markdown', 'css', 'html'],
+  defaultColor: false,
+};
+
 // 双向链接正则：匹配 [[link]] 或 [[link|text]]
 const WIKILINK_REGEX = /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g;
 
@@ -228,7 +235,7 @@ export async function getCompiledGardenNode(slug: string): Promise<GardenNode & 
       parseFrontmatter: false,
       mdxOptions: {
         rehypePlugins: [
-          [rehypeShiki, { theme: 'github-dark' }],
+          [rehypeShiki, shikiOptions],
           rehypeSlug,
           [rehypeAutolinkHeadings, {
             behavior: 'wrap',

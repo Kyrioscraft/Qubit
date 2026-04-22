@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { siteConfig } from '@/config/site';
 import { mainNavigation } from '@/config/navigation';
 import { ThemeToggle } from '@/components/ui/ThemeToggle';
-import { SearchInput } from '@/components/ui/SearchInput';
+import { SearchModal } from '@/components/ui/SearchModal';
 
 export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -78,27 +78,7 @@ export function Header() {
       </div>
 
       {/* Search Modal */}
-      {isSearchOpen && (
-        <div className="fixed inset-0 z-50 bg-[var(--color-background)]/80 backdrop-blur-md">
-          <div className="max-w-2xl mx-auto px-4 py-16">
-            <SearchInput
-              autoFocus
-              placeholder="搜索文章、项目、书签..."
-              onSubmit={(value) => {
-                window.location.href = `/search?q=${encodeURIComponent(value)}`;
-              }}
-            />
-            <button
-              onClick={() => setIsSearchOpen(false)}
-              className="absolute top-4 right-4 p-2 rounded-lg text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      )}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
@@ -114,6 +94,16 @@ export function Header() {
                 {item.title}
               </Link>
             ))}
+            {/* 移动端搜索按钮 */}
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                setIsSearchOpen(true);
+              }}
+              className="block py-2 text-base text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors w-full text-left"
+            >
+              搜索...
+            </button>
           </nav>
         </div>
       )}

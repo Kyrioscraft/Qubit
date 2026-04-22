@@ -11,12 +11,15 @@
   --color-text: oklch(20% 0 0);
   --color-text-muted: oklch(45% 0 0);
   --color-text-subtle: oklch(60% 0 0);
-  --color-accent: oklch(55% 0.15 250);
-  --color-accent-hover: oklch(50% 0.18 250);
-  --color-accent-subtle: oklch(92% 0.03 250);
-  --color-success: oklch(60% 0.15 145);
-  --color-warning: oklch(70% 0.15 75);
-  --color-error: oklch(55% 0.22 25);
+
+  /* Accent - 柔和的暖灰色，融入整体风格 */
+  --color-accent: oklch(45% 0.02 60);
+  --color-accent-hover: oklch(38% 0.03 60);
+  --color-accent-subtle: oklch(92% 0.01 60);
+
+  --color-success: oklch(60% 0.12 145);
+  --color-warning: oklch(70% 0.12 75);
+  --color-error: oklch(55% 0.20 25);
   --color-border: oklch(88% 0 0);
   --color-border-subtle: oklch(92% 0 0);
 
@@ -96,9 +99,12 @@
   --color-text: oklch(90% 0 0);
   --color-text-muted: oklch(70% 0 0);
   --color-text-subtle: oklch(55% 0 0);
-  --color-accent: oklch(65% 0.15 250);
-  --color-accent-hover: oklch(70% 0.18 250);
-  --color-accent-subtle: oklch(20% 0.03 250);
+
+  /* Accent - 暗色模式下稍亮的中性色 */
+  --color-accent: oklch(55% 0.03 60);
+  --color-accent-hover: oklch(60% 0.04 60);
+  --color-accent-subtle: oklch(22% 0.02 60);
+
   --color-border: oklch(25% 0 0);
   --color-border-subtle: oklch(20% 0 0);
 }

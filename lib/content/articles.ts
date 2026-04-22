@@ -16,6 +16,15 @@ import { mdxComponents } from '@/components/mdx';
 
 const CONTENT_DIR = path.join(process.cwd(), 'content');
 
+// Shiki 配置 - 性能优化：预加载常用语言
+const shikiOptions = {
+  theme: 'github-dark',
+  // 仅加载常用语言，减少启动时间
+  langs: ['javascript', 'typescript', 'jsx', 'tsx', 'python', 'bash', 'json', 'markdown', 'css', 'html'],
+  // 禁用内联样式，减少输出体积
+  defaultColor: false,
+};
+
 export function getArticleSlugs(): string[] {
   const articlesDir = path.join(CONTENT_DIR, 'articles');
   if (!fs.existsSync(articlesDir)) return [];
@@ -146,7 +155,7 @@ export async function getCompiledArticle(slug: string): Promise<Article & { comp
       parseFrontmatter: false,
       mdxOptions: {
         rehypePlugins: [
-          [rehypeShiki, { theme: 'github-dark' }],
+          [rehypeShiki, shikiOptions],
           rehypeSlug,
           [rehypeAutolinkHeadings, {
             behavior: 'wrap',
