@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/prebuild.js",
-    "build": "npm run prebuild && next build && npx opennextjs-cloudflare build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "deploy": "npm run build && npx wrangler deploy"
