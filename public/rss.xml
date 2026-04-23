@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Qubit</title>
+    <link>https://qubit.pages.dev</link>
+    <description>个人知识分享平台</description>
+    <language>zh-CN</language>
+    <atom:link href="https://qubit.pages.dev/rss.xml" rel="self" type="application/rss+xml"/>
+
+    <item>
+      <title>Next.js App Router 最佳实践</title>
+      <link>https://qubit.pages.dev/blog/nextjs-best-practices</link>
+      <description>探索 Next.js App Router 的最佳实践，包括路由组织、数据获取、缓存策略等。</description>
+      <category>Next.js</category>
+      <category>React</category>
+      <category>Web开发</category>
+    </item>
+
+    <item>
+      <title>TypeScript 类型系统深入理解</title>
+      <link>https://qubit.pages.dev/blog/typescript-types</link>
+      <description>深入探讨 TypeScript 的类型系统，包括泛型、类型推断、高级类型模式等核心概念。</description>
+      <category>TypeScript</category>
+      <category>类型系统</category>
+      <category>泛型</category>
+    </item>
+
+    <item>
+      <title>欢迎使用 Qubit</title>
+      <link>https://qubit.pages.dev/blog/welcome</link>
+      <description>Qubit 是一个现代化的个人知识分享平台，这篇文章介绍了平台的核心功能和设计理念。</description>
+      <category>介绍</category>
+      <category>平台</category>
+    </item>
+  </channel>
+</rss>

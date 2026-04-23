@@ -1,0 +1,4 @@
+# Cloudflare Pages Redirects Configuration
+
+# 404 fallback
+/not-found  /404.html  404

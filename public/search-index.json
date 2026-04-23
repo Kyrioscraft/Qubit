@@ -1,0 +1,97 @@
+[
+  {
+    "type": "article",
+    "slug": "nextjs-best-practices",
+    "title": "Next.js App Router 最佳实践",
+    "description": "探索 Next.js App Router 的最佳实践，包括路由组织、数据获取、缓存策略等。",
+    "tags": [
+      "Next.js",
+      "React",
+      "Web开发"
+    ],
+    "category": "technology",
+    "url": "/blog/nextjs-best-practices",
+    "contentSnippet": " Next.js App Router 最佳实践  Next.js App Router 引入了全新的路由架构，本文将分享一些最佳实践。  路由组织  使用路由组 (Route Groups) 来组织路由：  ``` app/ ├── (public)/ │   ├── blog/ │   └── about/ ├── (admin)/ │   └── dashboard/ ```  数据获取  使用 Server Components 进行数据获取：  ```typescript async function BlogPost({ slug }) {   const post = await getPost(slug);   return <Article content={post.content} />; } ```  缓存策略  静态渲染  默认情况下，页面是静态渲染的：  ```typescript // 在构建时生成 export default async function Page() {   const data = await fetc"
+  },
+  {
+    "type": "article",
+    "slug": "typescript-types",
+    "title": "TypeScript 类型系统深入理解",
+    "description": "深入探讨 TypeScript 的类型系统，包括泛型、类型推断、高级类型模式等核心概念。",
+    "tags": [
+      "TypeScript",
+      "类型系统",
+      "泛型"
+    ],
+    "category": "technology",
+    "url": "/blog/typescript-types",
+    "contentSnippet": " TypeScript 类型系统深入理解  TypeScript 的类型系统是其最强大的特性之一。本文将深入探讨其核心概念。  泛型基础  泛型允许我们创建可重用的组件，这些组件可以与多种类型一起工作：  ```typescript function identity<T>(arg: T): T {   return arg; }  // 使用 const result = identity<string>(\"hello\"); ```  类型推断  TypeScript 的类型推断能力非常强大：  ```typescript let x = 3; // 推断为 number let y = [1, 2, 3]; // 推断为 number[] ```  高级类型模式  条件类型  ```typescript type IsString<T> = T extends string ? true : false;  type A = IsString<string>; // true type B = IsString<number>; // false ``"
+  },
+  {
+    "type": "article",
+    "slug": "welcome",
+    "title": "欢迎使用 Qubit",
+    "description": "Qubit 是一个现代化的个人知识分享平台，这篇文章介绍了平台的核心功能和设计理念。",
+    "tags": [
+      "介绍",
+      "平台"
+    ],
+    "category": "announcement",
+    "url": "/blog/welcome",
+    "contentSnippet": " 欢迎使用 Qubit  Qubit 是一个现代化的个人知识分享平台。它超越了传统博客的概念，整合了多个模块，打造一个完整的知识生态系统。  核心功能  博客系统  - Markdown/MDX 支持 - 分类与标签系统 - 文章系列 - 阅读时间估算 - 自动生成目录  数字花园  - 知识节点互联（双向链接） - 可视化知识图谱 - 内容成熟度标记  其他模块  - 项目展厅 - 书签收藏 - 书评影评 - 时间线  设计理念  Qubit 的设计遵循以下原则：  1. **知识中枢** - 系统化整理和分享个人知识 2. **作品展厅** - 展示项目和成果 3. **思想花园** - 数字花园式的互联笔记 4. **社交节点** - 与读者建立真实连接  技术栈  - Next.js 16 (App Router) - TypeScript 5 - Tailwind CSS 4 - MDX (Content Collections)  ---  开始探索吧！"
+  },
+  {
+    "type": "garden",
+    "slug": "abstraction",
+    "title": "抽象",
+    "description": " # 抽象 (Abstraction)  抽象是编程的核心思想之一，它允许我们隐藏复杂的实现细节，只暴露必要的接口。  ## 什么是抽象？  抽象是一种思维方式，让我们关注\"做什么\"而不是\"怎么做\"。",
+    "tags": [
+      "programming",
+      "concepts"
+    ],
+    "maturity": "budding",
+    "url": "/garden/abstraction",
+    "contentSnippet": " # 抽象 (Abstraction)  抽象是编程的核心思想之一，它允许我们隐藏复杂的实现细节，只暴露必要的接口。  ## 什么是抽象？  抽象是一种思维方式，让我们关注\"做什么\"而不是\"怎么做\"。  ## 抽象的层次  1. **高层抽象** - 关注业务逻辑 2. **中层抽象** - 关注模块和组件 3. **低层抽象** - 关注具体实现  ## 抽象的好处  - 降低认知负担 - 提高代码可读性 - 便于维护和修改  ## 相关概念  - encapsulation - 封装 - modularity - 模块化 - programming-concepts"
+  },
+  {
+    "type": "garden",
+    "slug": "functional-programming",
+    "title": "函数式编程",
+    "description": " # 函数式编程 (Functional Programming)  函数式编程是一种编程范式，它将计算视为数学函数的求值。  ## 核心特性  1. **纯函数** - 相同输入永远返回相同输出，无",
+    "tags": [
+      "programming",
+      "functional",
+      "paradigm"
+    ],
+    "maturity": "seedling",
+    "url": "/garden/functional-programming",
+    "contentSnippet": " # 函数式编程 (Functional Programming)  函数式编程是一种编程范式，它将计算视为数学函数的求值。  ## 核心特性  1. **纯函数** - 相同输入永远返回相同输出，无副作用 2. **不可变性** - 数据一旦创建就不能修改 3. **高阶函数** - 函数可以作为参数和返回值 4. **声明式** - 描述\"做什么\"而非\"怎么做\"  ## 优势  - 更容易测试 - 更容易推理 - 更容易并发 - 更少的 bug  ## 相关概念  - immutability - 不可变性 - programming-concepts - 编程思想索引"
+  },
+  {
+    "type": "garden",
+    "slug": "immutability",
+    "title": "不可变性",
+    "description": " # 不可变性 (Immutability)  不可变性是函数式编程的核心原则之一。  ## 什么是不可变性？  不可变性意味着一旦数据被创建，就不能被修改。任何\"修改\"操作都会返回一个新的数据副本。",
+    "tags": [
+      "programming",
+      "functional"
+    ],
+    "maturity": "budding",
+    "url": "/garden/immutability",
+    "contentSnippet": " # 不可变性 (Immutability)  不可变性是函数式编程的核心原则之一。  ## 什么是不可变性？  不可变性意味着一旦数据被创建，就不能被修改。任何\"修改\"操作都会返回一个新的数据副本。  ## 为什么重要？  ### 1. 避免副作用  ```typescript // 可变 - 有副作用 const arr = [1, 2, 3]; arr.push(4); // arr 被修改了  // 不可变 - 无副作用 const arr = [1, 2, 3]; const newArr = [...arr, 4]; // arr 保持不变 ```  ### 2. 简化调试  不可"
+  },
+  {
+    "type": "garden",
+    "slug": "programming-concepts",
+    "title": "编程思想",
+    "description": " # 编程思想  这是一个关于编程核心思想的主题索引页。  ## 核心概念  - [[abstraction]] - 抽象是编程的本质 - [[encapsulation]] - 封装隐藏实现细节 -",
+    "tags": [
+      "moc",
+      "programming",
+      "concepts"
+    ],
+    "maturity": "evergreen",
+    "url": "/garden/programming-concepts",
+    "contentSnippet": " # 编程思想  这是一个关于编程核心思想的主题索引页。  ## 核心概念  - abstraction - 抽象是编程的本质 - encapsulation - 封装隐藏实现细节 - modularity - 模块化让代码可组合 - immutability - 不可变性避免副作用  ## 设计原则  - solid-principles - SOLID 设计原则 - dry - 不要重复自己 - kiss - 保持简单  ## 相关主题  - typescript-types - TypeScript 类型系统 - [[fun"
+  }
+]
