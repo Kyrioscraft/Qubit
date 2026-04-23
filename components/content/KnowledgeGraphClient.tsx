@@ -131,7 +131,7 @@ export function KnowledgeGraphClient({ initialData }: KnowledgeGraphClientProps)
           </p>
           <a
             href={`/garden/${selectedNode.slug}`}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[var(--color-accent)] text-white text-sm hover:bg-[var(--color-accent-hover)] transition-colors"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-[var(--color-button-bg)] text-[var(--color-button-text)] text-sm hover:bg-[var(--color-button-bg-hover)] border border-[var(--color-button-border)] hover:border-[var(--color-button-border-hover)] transition-colors"
           >
             查看详情
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

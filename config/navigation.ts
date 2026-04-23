@@ -38,6 +38,16 @@ export const mainNavigation: NavItem[] = [
     description: '个人里程碑',
   },
   {
+    title: '下载',
+    href: '/downloads',
+    description: '资源下载',
+  },
+  {
+    title: '演讲',
+    href: '/talks',
+    description: '演讲与分享',
+  },
+  {
     title: '关于',
     href: '/about',
     description: '关于我',
@@ -56,6 +66,7 @@ export const footerNavigation = {
     { title: '关于我', href: '/about' },
     { title: '订阅', href: '/subscribe' },
     { title: 'RSS', href: '/rss.xml' },
+    { title: '分析', href: '/dashboard' },
   ],
   social: [
     { title: 'GitHub', href: 'https://github.com/yourusername' },

@@ -1,4 +1,4 @@
-import { Card, CardTitle, CardDescription } from '@/components/ui';
+import { Button, ButtonLink, Card, CardTitle, CardDescription } from '@/components/ui';
 import { mainNavigation } from '@/config/navigation';
 
 export default function HomePage() {
@@ -15,18 +15,12 @@ export default function HomePage() {
               个人知识分享平台 - 系统化整理和分享个人知识
             </p>
             <div className="flex justify-center gap-4 animate-slide-up">
-              <a
-                href="/blog"
-                className="px-6 py-3 rounded-lg bg-[var(--color-accent)] text-white font-medium hover:bg-[var(--color-accent-hover)] transition-colors"
-              >
+              <ButtonLink href="/blog" variant="primary" size="lg">
                 浏览博客
-              </a>
-              <a
-                href="/garden"
-                className="px-6 py-3 rounded-lg bg-[var(--color-surface)] text-[var(--color-text)] border border-[var(--color-border)] hover:bg-[var(--color-surface-hover)] transition-colors"
-              >
+              </ButtonLink>
+              <ButtonLink href="/garden" variant="secondary" size="lg">
                 数字花园
-              </a>
+              </ButtonLink>
             </div>
           </div>
         </div>

@@ -4,6 +4,8 @@ import type { Project, ProjectFrontmatter } from './project';
 import type { Review, ReviewFrontmatter } from './review';
 import type { Bookmark, BookmarkFrontmatter } from './bookmark';
 import type { TimelineEvent, TimelineEventFrontmatter } from './timeline-event';
+import type { Download, DownloadFrontmatter } from './download';
+import type { Talk, TalkFrontmatter } from './talk';
 
 export type ContentType = 'article' | 'garden' | 'project' | 'review' | 'bookmark' | 'timeline';
 
@@ -22,3 +24,5 @@ export * from './project';
 export * from './review';
 export * from './bookmark';
 export * from './timeline-event';
+export * from './download';
+export * from './talk';

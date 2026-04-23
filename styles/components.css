@@ -14,13 +14,15 @@
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: white;
+  background: var(--color-button-bg);
+  color: var(--color-button-text);
   padding: var(--space-3) var(--space-6);
+  border: 1px solid var(--color-button-border);
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
+  background: var(--color-button-bg-hover);
+  border-color: var(--color-button-border-hover);
 }
 
 .btn-secondary {

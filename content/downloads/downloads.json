@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "title": "个人知识管理模板",
+    "description": "Qubit 知识管理 Notion 模板，帮助你建立个人知识体系",
+    "category": "templates",
+    "version": "1.0.0",
+    "size": "2.5 MB",
+    "downloadUrl": "/downloads/templates/knowledge-manager.zip",
+    "tags": ["知识管理", "Notion", "模板"],
+    "downloads": 128,
+    "createdAt": "2024-01-15"
+  },
+  {
+    "id": "2",
+    "title": "项目提案模板",
+    "description": "用于项目提案和技术文档的 Markdown 模板",
+    "category": "templates",
+    "version": "1.2.0",
+    "size": "156 KB",
+    "downloadUrl": "/downloads/templates/project-proposal.zip",
+    "tags": ["模板", "Markdown", "文档"],
+    "downloads": 89,
+    "createdAt": "2024-02-01"
+  },
+  {
+    "id": "3",
+    "title": "技术写作指南",
+    "description": "个人技术博客写作指南PDF，包含写作技巧和工具推荐",
+    "category": "guides",
+    "version": "2.0.0",
+    "size": "1.8 MB",
+    "downloadUrl": "/downloads/guides/tech-writing-guide.pdf",
+    "tags": ["写作", "博客", "技术"],
+    "downloads": 256,
+    "createdAt": "2024-03-10"
+  }
+]

@@ -24,8 +24,8 @@ export function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-6">
-            {mainNavigation.slice(0, 4).filter((item) => item.href).map((item) => (
+          <nav className="hidden lg:flex items-center gap-5">
+            {mainNavigation.filter((item) => item.href).map((item) => (
               <Link
                 key={item.href}
                 href={item.href!}

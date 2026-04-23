@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1",
+    "title": "TypeScript 类型系统的艺术",
+    "subject": "TypeScript Deep Dive",
+    "description": "分享 TypeScript 高级类型系统的使用技巧和最佳实践",
+    "date": "2024-03-15",
+    "location": "线上",
+    "type": "talk",
+    "slidesUrl": "/downloads/talks/typescript-types.pdf",
+    "videoUrl": "https://example.com/video/typescript",
+    "tags": ["TypeScript", "类型系统"],
+    "status": "published"
+  },
+  {
+    "id": "2",
+    "title": "构建个人知识管理系统",
+    "subject": "Personal Knowledge Management",
+    "description": "如何利用数字花园理念构建个人知识管理系统",
+    "date": "2024-02-20",
+    "location": "技术社区",
+    "type": "workshop",
+    "slidesUrl": "/downloads/talks/pkm-workshop.pdf",
+    "videoUrl": "https://example.com/video/pkm",
+    "tags": ["知识管理", "数字花园", "Obsidian"],
+    "status": "published"
+  }
+]

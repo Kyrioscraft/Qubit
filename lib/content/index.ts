@@ -14,3 +14,5 @@ export { getProjectSlugs, getProject, getAllProjects, getProjectsByStatus, getAc
 export { getAllBookmarks, getPublicBookmarks, getBookmarksByCategory, getBookmarksByTag } from './bookmarks';
 export { getReviewSlugs, getReview, getAllReviews, getReviewsByType, getBookReviews, getMovieReviews, getHighRatedReviews, getYearlyReviewStats } from './reviews';
 export { getAllTimelineEvents, getTimelineEventsByType, getTimelineEventsByYear, getYearlyTimelineSummary, EventTypeLabels } from './timeline';
+export { getAllDownloads, getDownloadsByCategory, getDownloadById, getCategories } from './downloads';
+export { getAllTalks, getTalkById } from './talks';

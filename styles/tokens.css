@@ -17,6 +17,13 @@
   --color-accent-hover: oklch(38% 0.03 60);
   --color-accent-subtle: oklch(92% 0.01 60);
 
+  /* Button - Light Theme */
+  --color-button-bg: oklch(0% 0 0);
+  --color-button-bg-hover: oklch(10% 0 0);
+  --color-button-text: oklch(100% 0 0);
+  --color-button-border: oklch(0% 0 0);
+  --color-button-border-hover: oklch(10% 0 0);
+
   --color-success: oklch(60% 0.12 145);
   --color-warning: oklch(70% 0.12 75);
   --color-error: oklch(55% 0.20 25);
@@ -104,6 +111,13 @@
   --color-accent: oklch(55% 0.03 60);
   --color-accent-hover: oklch(60% 0.04 60);
   --color-accent-subtle: oklch(22% 0.02 60);
+
+  /* Button - Dark Theme */
+  --color-button-bg: oklch(100% 0 0);
+  --color-button-bg-hover: oklch(95% 0 0);
+  --color-button-text: oklch(0% 0 0);
+  --color-button-border: oklch(100% 0 0);
+  --color-button-border-hover: oklch(95% 0 0);
 
   --color-border: oklch(25% 0 0);
   --color-border-subtle: oklch(20% 0 0);
